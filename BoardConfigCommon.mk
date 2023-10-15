@@ -160,7 +160,7 @@ BOARD_USES_ALSA_AUDIO := true
 TARGET_KEYMASTER_VARIANT := samsung
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_samsung_sm7325
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_samsung_sm6375
 
 # HIDL manifests
 DEVICE_MANIFEST_SKUS := yupik
@@ -207,7 +207,7 @@ BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/root/fstab.qcom
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_samsung_sm7325
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_samsung_sm6375
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 # SePolicy
