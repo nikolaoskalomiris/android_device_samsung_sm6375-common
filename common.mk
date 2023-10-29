@@ -42,22 +42,23 @@ PRODUCT_PACKAGES += \
     init.ramplus.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
+    init.samsung.power.rc \
     init.samsung.rc \
     init.target.rc \
     init.vendor.onebinary.rc \
     init.vendor.rilchip.rc \
     init.vendor.rilcommon.rc \
     init.vendor.sensors.rc \
-    wifi_firmware.rc \
     ueventd.qcom.rc \
-    wifi_qcom_wcn6750.rc \
-    wifi_sec.rc
+    wifi_qcom.rc \
+    wifi.rc
 
 # Vendor scripts
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.kernel.post_boot.sh \
-    init.kernel.post_boot-yupik.sh \
+    init.kernel.post_boot-blair.sh \
+    init.kernel.post_boot-holi.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \

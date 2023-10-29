@@ -33,9 +33,6 @@ on post-fs-data
     chown system radio /sys/class/audio/earjack/mic_adc
     chown system radio /sys/class/audio/earjack/select_jack
     chown system radio /sys/class/audio/earjack/state
-    chown system radio /sys/class/audio/earjack/headset_state
-    chown system radio /sys/class/audio/earjack/l_impedance
-    chown system radio /sys/class/audio/earjack/r_impedance
 
 # Cirrus Amp Calibration
     chown system audio /sys/class/cirrus/cirrus_cal/status
@@ -123,7 +120,3 @@ on post-fs-data
     chown system audio /sys/class/tfa/tfa_vval/status_r
     chown system audio /sys/class/tfa/tfa_vval/validation
     chmod 0660 /sys/class/tfa/tfa_cal/status
-
-# SSRM Amp temperature
-    chown system system /sys/class/audio/amp/surface_temperature_0
-    chown system system /sys/class/audio/amp/surface_temperature_1

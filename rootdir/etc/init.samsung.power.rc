@@ -1,9 +1,5 @@
-#=============================================================================
-# Copyright (c) 2020-2021 Qualcomm Technologies, Inc.
-# All Rights Reserved.
-# Confidential and Proprietary - Qualcomm Technologies, Inc.
-#
-# Copyright (c) 2012-2013, 2016-2020, The Linux Foundation. All rights reserved.
+
+# Copyright (c) 2019-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -29,21 +25,43 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#=============================================================================
+#
+#
 
-if [ -f /sys/devices/soc0/chip_family ]; then
-	chipfamily=`cat /sys/devices/soc0/chip_family`
-fi
+on early-init
 
-case "$chipfamily" in
-    "0x73")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-holi.sh
-	;;
+on init
 
-    "0x7c")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-blair.sh
-	;;
-     *)
-	echo "***WARNING***: Invalid chip family\n\t No postboot settings applied!!\n"
-	;;
-esac
+on late-init
+
+on post-fs
+
+on late-fs
+
+on post-fs-data
+
+on boot
+    chown radio system /sys/power/cpufreq_max_limit
+    chown radio system /sys/power/cpufreq_min_limit
+    chown radio system /sys/power/cpufreq_table
+    chown radio system /sys/power/over_limit
+    chmod 664 /sys/power/cpufreq_max_limit
+    chmod 664 /sys/power/cpufreq_min_limit
+    chmod 444 /sys/power/cpufreq_table
+    chmod 664 /sys/power/over_limit
+    write /sys/power/pm_debug_messages 1
+    chown radio system /sys/module/lpm_levels/parameters/secdebug
+    chmod 664 /sys/module/lpm_levels/parameters/secdebug
+    chown radio system /sys/power/volkey_wakeup
+    chmod 0660 /sys/power/volkey_wakeup
+    chown radio system /sys/module/qpnp_power_on/parameters/reset_enabled
+    chmod 664 /sys/module/qpnp_power_on/parameters/reset_enabled
+    chown radio system /sys/module/qpnp_power_on/parameters/wake_enabled
+    chmod 664 /sys/module/qpnp_power_on/parameters/wake_enabled
+
+on shutdown
+
+# service definition
+
+# on property triggers
+
