@@ -37,10 +37,9 @@ vendor.audio.use.sw.mpegh.decoder=true
 vendor.audio.hw.aac.encoder=true
 ro.af.client_heap_size_kbyte=7168
 vendor.audio_hal.in_period_size=144
-vendor.audio_hal.period_multiplier=4
-vendor.audio.adm.buffering.ms=3
+vendor.audio_hal.period_multiplier=3
+vendor.audio.adm.buffering.ms=2
 vendor.audio.volume.headset.gain.depcal=true
-persist.vendor.audio.fluence.voicecomm=true
 vendor.audio.hal.output.suspend.supported=true
 aaudio.mmap_policy=2
 aaudio.mmap_exclusive_policy=2
@@ -111,10 +110,11 @@ ro.camera.notify_nfc=1
 # Chipset
 ro.soc.manufacturer=QTI
 ro.soc.model=SM6375
+ro.vendor.qspm.enable=false
+persist.vendor.radio.enableadvancedscan=true
 
 # Crypto
 ro.crypto.metadata_init_delete_all_keys.enabled=false
-ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 
@@ -144,7 +144,7 @@ vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.comp_mask=0
 vendor.display.enable_optimize_refresh=1
-vendor.display.use_smooth_motion=1
+vendor.display.use_smooth_motion=0
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.disable_client_composition_cache=1
 vendor.display.disable_ext_anim=1
@@ -160,17 +160,16 @@ vendor.display.idle_time=0
 vendor.display.idle_time_inactive=0
 vendor.display.disable_dynamic_fps=1
 vendor.display.disable_hw_recovery_dump=1
-vendor.display.enable_early_wakeup=0
+vendor.display.enable_early_wakeup=1
 persist.sys.sf.hs_mode=0
 ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
-ro.surface_flinger.use_content_detection_for_refresh_rate=false
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 # Gatekeeper
 ro.hardware.gatekeeper=mdfpp
@@ -188,7 +187,6 @@ ro.vendor.extension_library=libqti-perfd-client.so
 
 # RIL
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
-vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
 persist.vendor.radio.atfwd.start=true
 ro.vendor.use_data_netmgrd=false
 ro.vendor.sec.radio.def_network=9
@@ -214,3 +212,14 @@ ro.vendor.vibrator_hal.tick_duration=40
 
 # Wifi
 wifi.aware.interface=wifi-aware0
+
+# NFC
+ro.vendor.nfc.feature.chipname=STM_ST21
+ro.vendor.nfc.support.advancedsetting=false
+ro.vendor.nfc.support.autoselect=true
+ro.vendor.nfc.support.defaultaid=true
+ro.vendor.nfc.support.nonaid=true
+ro.vendor.nfc.support.othercategory=true
+ro.vendor.nfc.support.uicc=true
+ro.vendor.nfc.info.antpos=16
+ro.vendor.nfc.support.ese=false
