@@ -27,7 +27,9 @@
 
 on init
     exec u:r:su:s0 -- /system/bin/insmod /vendor/lib/modules/sec_tsp_log.ko
-    exec u:r:su:s0 -- /system/bin/insmod /vendor/lib/modules/sec_tclm_v2.ko
+    exec u:r:su:s0 -- /system/bin/insmod /vendor/lib/modules/novatek_ts_nt36523.ko
+    exec u:r:su:s0 -- /system/bin/insmod /vendor/lib/modules/ovt_td4150_spi.ko
+    exec u:r:su:s0 -- /system/bin/insmod /vendor/lib/modules/lxs_ts.ko
     exec u:r:su:s0 -- /system/bin/insmod /vendor/lib/modules/sec_secure_touch.ko
     exec u:r:su:s0 -- /system/bin/insmod /vendor/lib/modules/sec_common_fn.ko
     exec u:r:su:s0 -- /system/bin/insmod /vendor/lib/modules/sec_tsp_dumpkey.ko
