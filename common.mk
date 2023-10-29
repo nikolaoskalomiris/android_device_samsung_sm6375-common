@@ -50,8 +50,7 @@ PRODUCT_PACKAGES += \
     init.vendor.rilcommon.rc \
     init.vendor.sensors.rc \
     ueventd.qcom.rc \
-    wifi_qcom.rc \
-    wifi.rc
+    wifi_qcom.rc
 
 # Vendor scripts
 PRODUCT_PACKAGES += \
