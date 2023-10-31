@@ -111,7 +111,6 @@ ro.camera.notify_nfc=1
 ro.soc.manufacturer=QTI
 ro.soc.model=SM6375
 ro.vendor.qspm.enable=false
-persist.vendor.radio.enableadvancedscan=true
 
 # Crypto
 ro.crypto.metadata_init_delete_all_keys.enabled=false
@@ -130,7 +129,6 @@ dalvik.vm.lockprof.threshold=500
 # Display
 ro.hardware.vulkan=adreno
 ro.hardware.egl=adreno
-ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lahaina.api30
 ro.opengles.version=196610
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_saturation=1.0
@@ -184,6 +182,8 @@ debug.stagefright.ccodec=4
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.perf-hal.ver=2.2
+ro.vendor.perf.scroll_opt=1
 
 # RIL
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
@@ -205,6 +205,7 @@ vendor.usb.rmnet.func.name=gsi
 vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=gsi
 vendor.usb.use_gadget_hal=0
+persist.sys.fuse.passthrough.enable=true
 
 # Vibrator
 ro.vendor.vibrator_hal.click_duration=80
@@ -215,6 +216,8 @@ wifi.aware.interface=wifi-aware0
 
 # NFC
 ro.vendor.nfc.feature.chipname=STM_ST21
+vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.qcom.bluetooth.scram.enabled=true
 ro.vendor.nfc.support.advancedsetting=false
 ro.vendor.nfc.support.autoselect=true
 ro.vendor.nfc.support.defaultaid=true
