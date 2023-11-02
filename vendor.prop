@@ -70,10 +70,11 @@ vendor.audio.feature.audiozoom.enable=false
 ro.config.vc_call_vol_steps=8
 
 # Bluetooth
+vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.qcom.bluetooth.scram.enabled=true
 ro.bluetooth.a2dp_offload.supported=true
 persist.bluetooth.a2dp_offload.disabled=false
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-lc3
-vendor.qcom.bluetooth.soc=moselle
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
@@ -216,8 +217,6 @@ wifi.aware.interface=wifi-aware0
 
 # NFC
 ro.vendor.nfc.feature.chipname=STM_ST21
-vendor.qcom.bluetooth.soc=cherokee
-persist.vendor.qcom.bluetooth.scram.enabled=true
 ro.vendor.nfc.support.advancedsetting=false
 ro.vendor.nfc.support.autoselect=true
 ro.vendor.nfc.support.defaultaid=true
