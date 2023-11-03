@@ -205,7 +205,6 @@ vendor.usb.qdss.inst.name=qdss_sw
 vendor.usb.rmnet.func.name=gsi
 vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=gsi
-vendor.usb.use_gadget_hal=0
 persist.sys.fuse.passthrough.enable=true
 
 # Vibrator
