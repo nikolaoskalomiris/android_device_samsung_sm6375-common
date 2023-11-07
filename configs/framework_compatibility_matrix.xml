@@ -1143,74 +1143,11 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.security.drk</name>
-        <version>2.0</version>
-        <interface>
-            <name>ISehDrk</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.security.engmode</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISehEngmode</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.security.engmode</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISehEngmode</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.security.ssu</name>
-        <interface>
-            <name>ISehSSUTEECL</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.security.vaultkeeper</name>
-        <version>2.0</version>
-        <interface>
-            <name>ISehVaultKeeper</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.security.widevine.keyprov</name>
         <version>1.0</version>
         <interface>
             <name>ISehWidevineKeyProvisioning</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.security.wsm</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISehWsm</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.snap</name>
-        <interface>
-            <name>ISehSnap</name>
-            <instance>default</instance>
-            <instance>secsnap</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.snap</name>
-        <interface>
-            <name>ISehSnap</name>
-            <instance>default</instance>
-            <instance>secsnap</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
